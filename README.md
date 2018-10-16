@@ -1,0 +1,1 @@
+# auto-resolver-excel-resource
