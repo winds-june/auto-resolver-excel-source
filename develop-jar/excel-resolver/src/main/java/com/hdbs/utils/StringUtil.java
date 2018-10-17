@@ -27,13 +27,13 @@ public class StringUtil {
             i++;
         }
         // 去除字符串右边的所有空格
-        while ( " ".equals(strList[j]) && i>0 ){
+        while ( " ".equals(strList[j]) && j>0 ){
             if ( (j-1)>0 && " ".equals(strList[j-1]) ){
                 strList[j]="";
             }else {
                 break;
             }
-            i--;
+            j--;
         }
         for (String temp : strList){
             sb.append(temp);
