@@ -2,12 +2,12 @@ package com.hdbs.resolver;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.hdbs.utils.StringUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 
 import com.hdbs.common.constants.Common;
 import com.hdbs.common.exceptions.ResolveFileException;
+import com.hdbs.utils.StringUtil;
 
 /**
  * @author :cnblogs-WindsJune
@@ -43,6 +44,8 @@ public class ExcelResolver<T> {
     private  String path =null;
     //反射初始化属性值对象
     private  ReflectionInitValue reflectionInitValue=null;
+    //处理数字
+    private static DecimalFormat df = new DecimalFormat("0");
 
     public List<T> getObjectsList() {
         return this.objectsList;
@@ -200,7 +203,7 @@ public class ExcelResolver<T> {
 				value=StringUtil.LRtrim(String.valueOf(xssfRow.getBooleanCellValue()));
 			} else if (xssfRow.getCellType() == xssfRow.CELL_TYPE_NUMERIC) {
 				// 返回数值类型的值
-				value=StringUtil.LRtrim(String.valueOf(xssfRow.getNumericCellValue()));
+				value=StringUtil.LRtrim(df.format(xssfRow.getNumericCellValue()));
 			} else {
 				// 返回字符串类型的值
 				value=StringUtil.LRtrim(String.valueOf(xssfRow.getStringCellValue()));
@@ -227,7 +230,7 @@ public class ExcelResolver<T> {
                 value=StringUtil.LRtrim(String.valueOf(hssfCell.getBooleanCellValue()));
 			} else if (hssfCell.getCellType() == hssfCell.CELL_TYPE_NUMERIC) {
 				// 返回数值类型的值
-				value=StringUtil.LRtrim(String.valueOf(hssfCell.getNumericCellValue()));
+				value=StringUtil.LRtrim(df.format(hssfCell.getNumericCellValue()));
 			} else {
 				// 返回字符串类型的值
 				value=StringUtil.LRtrim(String.valueOf(hssfCell.getStringCellValue()));
