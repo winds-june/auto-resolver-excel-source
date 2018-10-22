@@ -1,4 +1,4 @@
-package com.hdbs.resolver;
+package com.winds.resolver;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,9 +20,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hdbs.common.constants.Common;
-import com.hdbs.common.exceptions.ResolveFileException;
-import com.hdbs.utils.StringUtil;
+import com.winds.common.constants.Common;
+import com.winds.common.exceptions.ResolveFileException;
+import com.winds.utils.StringUtil;
 
 /**
  * @author :cnblogs-WindsJune

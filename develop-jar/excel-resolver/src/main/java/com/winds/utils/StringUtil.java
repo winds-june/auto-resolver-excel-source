@@ -1,4 +1,4 @@
-package com.hdbs.utils;
+package com.winds.utils;
 
 /**
  * Creater: cnblogs-WindsJune

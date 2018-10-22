@@ -1,4 +1,4 @@
-package com.hdbs.beans;
+package com.winds.beans;
 
 import java.util.ArrayList;
 import java.util.Date;

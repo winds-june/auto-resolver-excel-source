@@ -1,15 +1,15 @@
-package com.hdbs.resolver;
-
-import com.hdbs.common.constants.Common;
-import com.hdbs.utils.DateUtil;
-import com.hdbs.utils.MethodsLRUCacheUtil;
-import com.hdbs.common.exceptions.LRUCacheException;
-import com.hdbs.common.exceptions.ResolveFileException;
+package com.winds.resolver;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.Date;
+
+import com.winds.common.constants.Common;
+import com.winds.common.exceptions.LRUCacheException;
+import com.winds.common.exceptions.ResolveFileException;
+import com.winds.utils.DateUtil;
+import com.winds.utils.MethodsLRUCacheUtil;
 
 /**
  * Creater: cnblogs-WindsJune

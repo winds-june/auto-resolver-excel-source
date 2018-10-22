@@ -1,4 +1,4 @@
-package com.hdbs.beans;
+package com.winds.beans;
 
 import java.io.Serializable;
 import java.util.List;

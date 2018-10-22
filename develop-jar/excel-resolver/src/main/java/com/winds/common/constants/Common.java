@@ -1,4 +1,4 @@
-package com.hdbs.common.constants;
+package com.winds.common.constants;
 
 /**
  * @author :cnblogs-WindsJune

@@ -1,4 +1,4 @@
-package com.hdbs.utils;
+package com.winds.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

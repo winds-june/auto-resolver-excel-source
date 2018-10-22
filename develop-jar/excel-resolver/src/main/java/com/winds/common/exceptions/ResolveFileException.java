@@ -1,4 +1,4 @@
-package com.hdbs.common.exceptions;
+package com.winds.common.exceptions;
 /**
  * Creater: cnblogs-WindsJune
  * Date: 2018/9/20

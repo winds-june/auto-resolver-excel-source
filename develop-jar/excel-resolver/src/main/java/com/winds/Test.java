@@ -1,13 +1,13 @@
-package com.hdbs;
-
-import com.hdbs.beans.Area;
-import com.hdbs.beans.Student;
-import com.hdbs.resolver.ExcelResolver;
+package com.winds;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.winds.beans.Area;
+import com.winds.beans.Student;
+import com.winds.resolver.ExcelResolver;
 
 /**
 * @author   :汪世生/cnblogs：WindsJune
