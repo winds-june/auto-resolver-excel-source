@@ -51,7 +51,7 @@ public class ExcelResolver<T> {
         return this.objectsList;
     }
 
-    public ExcelResolver(Object object, String path) throws IOException {
+    public ExcelResolver(Object object, String path) throws IOException, ResolveFileException {
         this.object=object;
         this.path=path;
 		reflectionInitValue=new ReflectionInitValue();
@@ -74,7 +74,7 @@ public class ExcelResolver<T> {
 	 * @return
 	 * @throws IOException
 	 */
-	public boolean readExcel() throws IOException {
+	public boolean readExcel() throws IOException, ResolveFileException {
 		if (StringUtils.isEmpty(path)) {
 			return false;
 		} else {
@@ -100,7 +100,7 @@ public class ExcelResolver<T> {
 	 * @return
 	 * @throws IOException
 	 */
-	public  boolean readXlsx() throws IOException{
+	public  boolean readXlsx() throws IOException, ResolveFileException {
 		InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
 		XSSFWorkbook xssfWorkbook = new XSSFWorkbook(is);
 		// 遍历sheet页
@@ -248,7 +248,7 @@ public class ExcelResolver<T> {
      * @param cloumns
      * @return String[]
      */
-	private  static String[] getFields (HSSFRow hssfRow,int cloumns){
+	private  static String[] getFields (HSSFRow hssfRow,int cloumns) throws ResolveFileException {
 	    String [] fields=new String[cloumns];
         int i=0;
         try {
@@ -269,7 +269,7 @@ public class ExcelResolver<T> {
      * @param cloumns
      * @return String[]
      */
-    private  static String[] getFields(XSSFRow xssfRow,int cloumns){
+    private  static String[] getFields(XSSFRow xssfRow,int cloumns) throws ResolveFileException {
         String [] fields=new String[cloumns];
         int i=0;
         try {

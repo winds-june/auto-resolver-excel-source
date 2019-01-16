@@ -37,7 +37,7 @@ public class ReflectionInitValue {
      * @param value-属性值
      * @throws Exception
      */
-    public void setValue(Object object, String key, String value) throws LRUCacheException {
+    public void setValue(Object object, String key, String value) throws LRUCacheException, ResolveFileException {
         String methodName = null;
         String paramType = null;
         Method[] methods = null;
@@ -102,7 +102,7 @@ public class ReflectionInitValue {
      * @throws Exception
      */
     public void excuteInvokeSetvalue(Object object, Method method, String paramType, String value,
-                                             int operationType){
+                                             int operationType) throws ResolveFileException {
         try {
             switch (paramType) {
                 case Common.DATA_TYPE_long: {// 参数属性long
@@ -189,7 +189,7 @@ public class ReflectionInitValue {
      * @return
      * @throws ResolveFileException
      */
-    public Object invokeClone (Object object){
+    public Object invokeClone (Object object) throws ResolveFileException {
         try {
             Method[] methods=MethodsLRUCacheUtil.get((Thread.currentThread().toString().hashCode()));
             Object result=null;

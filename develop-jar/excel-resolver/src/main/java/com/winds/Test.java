@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.winds.beans.Area;
 import com.winds.beans.Student;
+import com.winds.common.exceptions.ResolveFileException;
 import com.winds.resolver.ExcelResolver;
 
 /**
@@ -38,8 +39,10 @@ public class Test {
             }
         } catch ( IOException e ) {
             e.printStackTrace();
+        } catch ( ResolveFileException e ) {
+            e.printStackTrace();
         }
 
-	}
+    }
 
 }

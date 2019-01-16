@@ -11,9 +11,9 @@ import java.util.Date;
  */
 public class DateUtil {
 
-    private static final String datePattern1="yyyy-MM-dd HH:mm:ss";
+    private static final String YYYY_MM_DD_HH_MM_SS="yyyy-MM-dd HH:mm:ss";
 
-    private static final String datePattern2="yyyy-MM-dd";
+    private static final String YYYY_MM_DD="yyyy-MM-dd";
 
     /**
      * 采用默认格式转为日期
@@ -25,9 +25,9 @@ public class DateUtil {
         SimpleDateFormat format=null;
 
         if (dateStr !=null && dateStr.trim().length()>10){
-            format=new SimpleDateFormat(datePattern1);
+            format=new SimpleDateFormat(YYYY_MM_DD_HH_MM_SS);
         }else {
-            format=new SimpleDateFormat(datePattern2);
+            format=new SimpleDateFormat(YYYY_MM_DD);
         }
         try {
             date=format.parse(dateStr);

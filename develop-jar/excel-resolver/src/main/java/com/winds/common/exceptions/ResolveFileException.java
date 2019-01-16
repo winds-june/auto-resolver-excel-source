@@ -6,7 +6,7 @@ package com.winds.common.exceptions;
  * Description: 解析Excel的公共异常类
  */
 
-public class ResolveFileException extends RuntimeException{
+public class ResolveFileException extends Exception{
 
     /**
      * 错误码
